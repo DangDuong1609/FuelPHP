@@ -1,0 +1,69 @@
+else if($row_sp['id_dm'] == 2) {
+                                    echo "
+                                        <div class='col align-items-center'>
+                                            <div class='card border-light'>
+                                                <img src='./img/danhmuc/hoa_sinh_nhat/".$row_sp['hinh']."' class='card-img-top' alt='".$row_sp['moTa']."'>
+                                                <div class='card-body text-center'>
+                                                    <h5 class='card-title '>".$row_sp['tenHinh']."</h5>
+                                                    <div class='rating text-warning mt-5'>
+                                                        <span><i class='fas fa-star'></i></span>
+                                                        <span><i class='fas fa-star'></i></span>
+                                                        <span><i class='fas fa-star'></i></span>
+                                                        <span><i class='fas fa-star'></i></span>
+                                                        <span><i class='fas fa-star'></i></span>
+                                                    </div>
+                                                    <div class='price py-2'>
+                                                        <span>".$row_sp['giaBan'].".000đ</span>
+                                                    </div>
+                                                    <a href='#' class='btn btn-danger'>Đặt hàng</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ";
+                                }
+                                else if($row_sp['id_dm'] == 3) {
+                                    echo "
+                                        <div class='col align-items-center'>
+                                            <div class='card border-light'>
+                                                <img src='./img/danhmuc/hoa_tuoi/".$row_sp['hinh']."' class='card-img-top' alt='".$row_sp['moTa']."'>
+                                                <div class='card-body text-center'>
+                                                    <h5 class='card-title '>".$row_sp['tenHinh']."</h5>
+                                                    <div class='rating text-warning mt-5'>
+                                                        <span><i class='fas fa-star'></i></span>
+                                                        <span><i class='fas fa-star'></i></span>
+                                                        <span><i class='fas fa-star'></i></span>
+                                                        <span><i class='fas fa-star'></i></span>
+                                                        <span><i class='fas fa-star'></i></span>
+                                                    </div>
+                                                    <div class='price py-2'>
+                                                        <span>".$row_sp['giaBan'].".000đ</span>
+                                                    </div>
+                                                    <a href='#' class='btn btn-danger'>Đặt hàng</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ";
+                                }
+                                else{
+                                    echo "
+                                        <div class='col align-items-center'>
+                                            <div class='card border-light'>
+                                                <img src='./img/danhmuc/hoa_tinh_yeu/".$row_sp['hinh']."' class='card-img-top' alt='".$row_sp['moTa']."'>
+                                                <div class='card-body text-center'>
+                                                    <h5 class='card-title '>".$row_sp['tenHinh']."</h5>
+                                                    <div class='rating text-warning mt-5'>
+                                                        <span><i class='fas fa-star'></i></span>
+                                                        <span><i class='fas fa-star'></i></span>
+                                                        <span><i class='fas fa-star'></i></span>
+                                                        <span><i class='fas fa-star'></i></span>
+                                                        <span><i class='fas fa-star'></i></span>
+                                                    </div>
+                                                    <div class='price py-2'>
+                                                        <span>".$row_sp['giaBan'].".000đ</span>
+                                                    </div>
+                                                    <a href='#' class='btn btn-danger'>Đặt hàng</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ";
+                                }
