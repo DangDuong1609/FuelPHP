@@ -11,7 +11,7 @@
     <link href="./fontawesome-free-5.15.4-web/css/fontawesome.css" rel="stylesheet" />
     <link href="./fontawesome-free-5.15.4-web/css/brands.css" rel="stylesheet" />
     <link href="./fontawesome-free-5.15.4-web/css/solid.css" rel="stylesheet" />
-    <title>Document</title>
+    <title>Shop Hoa</title>
 </head>
 
 <body>

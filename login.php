@@ -6,27 +6,33 @@ session_start();
         $usernameoremail = mysqli_real_escape_string($db,$_POST['usernameoremail']);
         $password = mysqli_real_escape_string($db,$_POST['password']);
 
-        $reture_account = "SELECT * FROM account WHERE username = '$usernameoremail' OR email = '$usernameoremail' ";
+        $reture_account = "SELECT * FROM account WHERE username = '$usernameoremail'";
         $result_session = mysqli_query($db,$reture_account);
         $row = mysqli_fetch_array($result_session,MYSQLI_ASSOC);
-        // $active = $row['active'];
 
-        // $row_account = mysqli_fetch_assoc($result_session);
         $username = $row['username'];
         $password_account = $row['password'];
-        
-        $count = mysqli_num_rows($result_session);
 
-        if($count == 1) {
-            // echo "Yessss";die();
-            if(password_verify($password, $password_account)) {
-                $_SESSION['login_user'] = $username;
-                header("location: profile.php");
-            }else {
-                $em="Username/Email or Password Sai";
-                header("Location: login.php?loginfail=$em");
+        // var_dump($username);die();
+
+        // if ($usernameoremail != $username) {
+        //     $em="Username/Email or Password Sai";
+        //     header("Location: login.php?loginfail=$em");
+        // }else {
+            $count = mysqli_num_rows($result_session);
+    
+            if($count == 1) {
+                // echo "Yessss";die();
+                if(password_verify($password, $password_account)) {
+                    $_SESSION['login_user'] = $username;
+                    header("location: index.php");
+                }else {
+                    $em="Username/Email or Password Sai";
+                    header("Location: login.php?loginfail=$em");
+                }
             }
-        }
+
+        // }
     }
 ?>
 <!DOCTYPE html>
@@ -63,6 +69,7 @@ session_start();
     <!-- CHỖ NÀY LÀ HEADER -->
     <?php
         require_once("db_module.php");
+        include("header_no_login.php");
         $link=null;
         taoKetNoi($link);
     ?>

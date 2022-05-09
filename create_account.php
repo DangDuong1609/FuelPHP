@@ -31,6 +31,7 @@ taoKetNoi($link);
         $usid_ys = $row_account['usid'];
         $avatar = 'account/1.jpg';
         $password_hash = password_hash($password, PASSWORD_BCRYPT);
+        $quyen_role = 0;
 
         // $account_yes = chayTruyVanTraVeDL($link,"select * from account where email='$email_ys' orwhere username='$username_ys' orwhere usid='$usid_ys' ");
         // $row_account_yes = mysqli_fetch_assoc($account_yes);
@@ -48,7 +49,7 @@ taoKetNoi($link);
             $usid = random_alphanumeric(40);
         }
         else {
-			$result=chayTruyVanKhongTraVeDL($link,"insert into account value(null, '$usid', '$fullname', '$email', '$username', '$password_hash', '$avatar', '$created_at', '$updated_at')");
+			$result=chayTruyVanKhongTraVeDL($link,"insert into account value(null, '$usid', '$fullname', '$email', '$username', '$password_hash', '$avatar','$quyen_role', '$created_at', '$updated_at')");
                 $em="Create Account Successfully";
                 header("Location: AddAccount.php?msg=$em");
         }

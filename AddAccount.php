@@ -32,7 +32,7 @@
     <!-- CHỖ NÀY LÀ HEADER -->
     <?php
         require_once("db_module.php");
-        include("header.php");
+        include("header_no_login.php");
         $link=null;
         taoKetNoi($link);
     ?>
